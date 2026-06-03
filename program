@@ -1,0 +1,36 @@
+using System;
+class program
+{
+  static void Main(string[] args)
+  {
+    double firstValue, secondValue;
+    string action;
+    Console.WriteLine("Введите первое число: ");
+    firstValue = double.Parse(Console.Readline());
+    Console.WriteLine("Введите второе число: ");
+    secondValue = double.Parse(Console.Readline());
+    Console.WriteLine("Выберите операцию: '+', '-', '*', '/'");
+    action = Console.Readline();
+    switch(action)
+    {
+      case "+":
+      Console.WriteLine(firstValue + secondValue);
+      break;
+      case "-":
+      Console.WriteLine(firstValue - secondValue);
+      break;
+      case "*":
+      Console.WriteLine(firstValue * secondValue);
+      break;
+      case "/":
+      if (secondValue == 0)
+      Console.WriteLine("Ошибка");
+      else
+      Console.WriteLine(firstValue / secondValue);
+      break;
+      default:
+      Console.WriteLine("Неизвестное действие");
+      break;
+     }
+   }
+} 
